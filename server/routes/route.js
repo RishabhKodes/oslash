@@ -1,6 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
+
+//home-page
+router.get('/', (req,res) =>{
+    res.send("This is the Home route!");
+});
+
 //signup and login
 router.post('/signup', userController.signup);
 router.post('/login', userController.login);
